@@ -6,7 +6,7 @@ export class Wadson {
     this.sleepLevel = 3;
     this.playLevel = 5;
     this.level = 1;
-    this.foodCounter = [];
+    this.foodCounter = 0;
   }
 
   setHunger() {
@@ -69,12 +69,8 @@ export class Wadson {
   }
 
    feed() {
-     let foodCounter;
      this.foodLevel = 10;
-     if(this.foodLevel === 10){
-       this.foodCounter.push(1);
-
-     }
+     this.foodCounter += 1;
      return this.foodLevel;
    }
 
@@ -85,7 +81,7 @@ export class Wadson {
    sleep() {
      alert(this.foodCounter);
      this.sleepLevel = 3;
-     return this.sleepLevel;
+     return this.sleepLevel
    }
 
    recess() {
