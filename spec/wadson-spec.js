@@ -55,7 +55,8 @@ describe('wadson', function() {
 
   it('Will set sleep level to default', function() {
     jasmine.clock().tick(30001);
-    expect(lumberjackWadson.sleep()).toEqual(3);
+    lumberjackWadson.sleep();
+    expect(lumberjackWadson.sleepLevel).toEqual(3);
   });
 
   it('Will set play level to default', function() {
