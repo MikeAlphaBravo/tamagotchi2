@@ -6,6 +6,7 @@ export class Wadson {
     this.sleepLevel = 3;
     this.playLevel = 5;
     this.level = 1;
+    this.foodCounter = [];
   }
 
   setHunger() {
@@ -67,25 +68,33 @@ export class Wadson {
     }
   }
 
-  wadsonDie() {
-   if (this.foodLevel === 0) {
-     return "you're dead";
-     }
-   }
-
    feed() {
+     let foodCounter;
      this.foodLevel = 10;
+     if(this.foodLevel === 10){
+       this.foodCounter.push(1);
+
+     }
      return this.foodLevel;
    }
 
+  //  var foods = newFoods();
+  //  var this.foodLevel = foods[0];
+  //  var foodCounter = foods[1];
+
    sleep() {
+     alert(this.foodCounter);
      this.sleepLevel = 3;
-     return this.sleepClear;
+     return this.sleepLevel;
    }
 
-   play() {
+   recess() {
      this.playLevel = 5;
      return this.playLevel;
+   }
+
+   levelCounter() {
+
    }
 
 }
