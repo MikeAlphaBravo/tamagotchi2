@@ -66,4 +66,26 @@ describe('wadson', function() {
     expect(lumberjackWadson.playLevel).toEqual(5);
   });
 
+  it("Will increase food counter by 1", function(){
+    lumberjackWadson.feed();
+    expect(lumberjackWadson.foodCounter).toEqual(1);
+  });
+
+  it("Will increase sleep counter by 1", function(){
+    lumberjackWadson.sleep();
+    expect(lumberjackWadson.sleepCounter).toEqual(1);
+  });
+
+  it("Will increase play counter by 1", function(){
+    lumberjackWadson.recess();
+    expect(lumberjackWadson.playCounter).toEqual(1);
+  });
+
+  it("Will increase level by one based on counters", function(){
+    lumberjackWadson.foodCounter = 21;
+    lumberjackWadson.sleepCounter = 7;
+    lumberjackWadson.playCounter = 8;
+    lumberjackWadson.levelCounter();
+    expect(lumberjackWadson.level).toEqual(2);
+  });
 });
