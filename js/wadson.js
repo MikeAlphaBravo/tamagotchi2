@@ -13,20 +13,26 @@ export class Wadson {
 
   setHunger() {
     setInterval(() => {
-      this.foodLevel--;
-    }, 15000);
+      if(this.foodLevel > 0) {
+        this.foodLevel--;
+      }
+    }, 1000);
   }
 
   setSleep() {
     setInterval(() => {
-      this.sleepLevel--;
-    }, 40000);
+      if(this.sleepLevel > 0) {
+        this.sleepLevel--;
+      }
+    }, 1000);
   }
 
   setPlay() {
     setInterval(() => {
-      this.playLevel--;
-    }, 30000);
+      if(this.playLevel > 0) {
+        this.playLevel--;
+      }
+    }, 1000);
   }
 
   // throw in random for numbers to adjust sleep level or food = sick etc

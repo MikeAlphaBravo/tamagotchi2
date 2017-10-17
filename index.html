@@ -4,7 +4,7 @@
       <link rel="stylesheet" href="build/css/vendor.css">
       <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
       <script src="build/js/vendor.min.js"></script>
-      <script src="build/css/styles.css"></script>
+      <link rel="stylesheet" href="css/styles.css"></link>
       <script type="text/javascript" src="build/js/app.js"></script>
     </head>
   <body>
@@ -12,7 +12,6 @@
       <div class="jumbotron">
         <h1>your pet Lumberjack Wadson</h1>
       </div>
-
       <div class="form-group">
         <form id="name">
           <label for="nameTitle">Enter your tamagotchi's name:</label>
@@ -22,12 +21,23 @@
       <div class="output">
         <h3 id="nameOutput"></h3>
       </div>
-      <div class="outputStats">
-        <p>Hunger:<span id="hunger"></span></p>
-        <p>Sleep:<span id="sleep"></span></p>
-        <p>Play:<span id="play"></span></p>
+      <div class="row">
+        <div class="col-md-1">
+          <p>Hunger:</p><br>
+          <p>Sleep:</p><br>
+          <p>Play:</p>
+        </div>
+        <div class="col-md-2">
+          <p><span id="hunger"></span></p><br>
+          <p><span id="sleep"></span></p><br>
+          <p><span id="play"></span></p>
+        </div>
+        <div class="col-md-9">
+          <p><button id="feed" class="btn btn-info">FEED ME!</button></p>
+          <p><button id="toSleep" class="btn btn-info">PUT ME TO BED!</button></p>
+          <p><button id="toPlay" class="btn btn-info">PLAY WITH ME!</button></p>
+        </div>
       </div>
-
       </div>
     </div>
   </body>
