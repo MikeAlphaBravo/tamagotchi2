@@ -42,7 +42,6 @@ export class Wadson {
     if(this.foodLevel ===  7){
       alert("Wadson is a little hungry");
       return("Wadson is a little hungry");
-
     } else if(this.foodLevel ===  4){
       alert("Wadson's tummy sure is 'a rumbl'n");
       return("Wadson's tummy sure is 'a rumbl'n");
@@ -75,7 +74,7 @@ export class Wadson {
       return("Auto SHUTdown yo! Wadson is going to sleep now whether you like it or not.");
     }
   }
-
+  // add functionality for play alerts
    feed() {
     this.foodCounter += 1;
     this.foodLevel = 10;
@@ -90,10 +89,13 @@ export class Wadson {
      this.playCounter += 1;
      this.playLevel = 5;
    }
-
+//levels are 21, 7, 8
    levelCounter() {
-     if(this.foodCounter === 21 && this.sleepCounter === 7 && this.playCounter === 8) {
+     if(this.foodCounter >= 21 && this.sleepCounter >= 7 && this.playCounter >= 8) {
        this.level += 1;
+       this.foodCounter = 0;
+       this.sleepCounter = 0;
+       this.playCounter = 0;
      }
    }
 

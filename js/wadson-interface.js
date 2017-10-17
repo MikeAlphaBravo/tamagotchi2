@@ -11,9 +11,9 @@ $(document).ready (function() {
     newPet.setSleep();
     newPet.setPlay();
 
-
     setInterval(function() {
       $('#hunger').text(newPet.foodLevel);
+      $('#level').text(newPet.level);
       $('#sleep').text(newPet.sleepLevel);
       $('#play').text(newPet.playLevel);
     });
@@ -22,14 +22,17 @@ $(document).ready (function() {
 
     $('#toFeed').click(function() {
       newPet.feed();
+      newPet.levelCounter();
     });
 
     $('#toSleep').click(function() {
       newPet.sleep();
+      newPet.levelCounter();
     });
 
     $('#toPlay').click(function() {
       newPet.recess();
+      newPet.levelCounter();
     });
 
   });
