@@ -50,7 +50,8 @@ describe('wadson', function() {
 
   it('Will set hunger level to default', function() {
     jasmine.clock().tick(30001);
-    expect(lumberjackWadson.feed()).toEqual(10);
+    lumberjackWadson.feed()
+    expect(lumberjackWadson.foodLevel).toEqual(10);
   });
 
   it('Will set sleep level to default', function() {
@@ -61,7 +62,8 @@ describe('wadson', function() {
 
   it('Will set play level to default', function() {
     jasmine.clock().tick(30001);
-    expect(lumberjackWadson.recess()).toEqual(5);
+    lumberjackWadson.recess();
+    expect(lumberjackWadson.playLevel).toEqual(5);
   });
 
 });

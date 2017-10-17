@@ -69,24 +69,19 @@ export class Wadson {
   }
 
    feed() {
-     this.foodLevel = 10;
-     this.foodCounter += 1;
-     return this.foodLevel;
+    this.foodCounter += 1;
+    this.foodLevel = 10;
+
    }
 
-  //  var foods = newFoods();
-  //  var this.foodLevel = foods[0];
-  //  var foodCounter = foods[1];
-
    sleep() {
-     alert(this.foodCounter);
      this.sleepLevel = 3;
-     return this.sleepLevel
+
    }
 
    recess() {
      this.playLevel = 5;
-     return this.playLevel;
+
    }
 
    levelCounter() {
