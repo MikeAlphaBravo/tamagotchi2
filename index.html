@@ -19,27 +19,35 @@
           <input type="text" id="tamagotchiName">
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-      <div class="output">
-        <h3 id="nameOutput"></h3>
-        <h4>Level: <span id="level"></span></h4>
-      </div>
-      <div class="row">
-        <div class="col-md-1">
-          <p>Hunger:</p><br>
-          <p>Sleep:</p><br>
-          <p>Play:</p>
+        <div class="output">
+          <h3 id="nameOutput"></h3>
+          <h4>Level: <span id="level"></span></h4>
         </div>
-        <div class="col-md-2">
-          <p><span id="hunger"></span></p><br>
-          <p><span id="sleep"></span></p><br>
-          <p><span id="play"></span></p>
+        <div class="row">
+          <div class="col-md-1">
+            <p>Hunger:</p><br>
+            <p>Sleep:</p><br>
+            <p>Play:</p>
+          </div>
+          <div class="col-md-2">
+            <p><span id="hunger"></span></p><br>
+            <p><span id="sleep"></span></p><br>
+            <p><span id="play"></span></p>
+          </div>
+          <div class="col-md-9">
+            <p><button id="toFeed" class="btn btn-info">FEED ME!</button></p>
+            <p><button id="toSleep" class="btn btn-info">PUT ME TO BED!</button></p>
+            <p><button id="toPlay" class="btn btn-info">PLAY WITH ME!</button></p>
+          </div>
+          <div class="card">
+            <h5>Alerts:</h5>
+            <h4 id="alertFeed"></h4>
+            <br>
+            <h4 id="alertSleep"></h4>
+            <br>
+            <h4 id="alertPlay"></h4>
+          </div>
         </div>
-        <div class="col-md-9">
-          <p><button id="toFeed" class="btn btn-info">FEED ME!</button></p>
-          <p><button id="toSleep" class="btn btn-info">PUT ME TO BED!</button></p>
-          <p><button id="toPlay" class="btn btn-info">PLAY WITH ME!</button></p>
-        </div>
-      </div>
       </div>
     </div>
   </body>

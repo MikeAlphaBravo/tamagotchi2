@@ -16,7 +16,7 @@ export class Wadson {
       if(this.foodLevel > 0) {
         this.foodLevel--;
       }
-    }, 1000);
+    }, 15000);
   }
 
   setSleep() {
@@ -24,7 +24,7 @@ export class Wadson {
       if(this.sleepLevel > 0) {
         this.sleepLevel--;
       }
-    }, 1000);
+    }, 40000);
   }
 
   setPlay() {
@@ -32,47 +32,68 @@ export class Wadson {
       if(this.playLevel > 0) {
         this.playLevel--;
       }
-    }, 1000);
+    }, 30000);
   }
 
   // throw in random for numbers to adjust sleep level or food = sick etc
   // sick check every sleep cycle
 
   alertHunger(){
+    let foodAlert;
     if(this.foodLevel ===  7){
-      alert("Wadson is a little hungry");
-      return("Wadson is a little hungry");
+      foodAlert = "Wadson is a little hungry";
+      return foodAlert;
     } else if(this.foodLevel ===  4){
-      alert("Wadson's tummy sure is 'a rumbl'n");
-      return("Wadson's tummy sure is 'a rumbl'n");
+      foodAlert = "Wadson's tummy sure is 'a rumbl'n";
+      return foodAlert;
 
     } else if(this.foodLevel === 1){
-      alert("Get that Wadson some foood! He's gonna die man!");
-      return("Get that Wadson some foood! He's gonna die man!");
+      foodAlert = "Get that Wadson some foood! He's gonna die man!";
+      return foodAlert;
 
     } else if (this.foodLevel === 0){
-      alert("You killed him! You monster!");
-      return("You killed him! You monster!");
+      foodAlert = "Killed him! You monster!";
+      return foodAlert;
     }
   }
 
   alertSleepy(){
+    let sleepAlert;
     if(this.sleepLevel === 3){
-      alert("Wadson is fully rested, biiiig stretch!");
-      return("Wadson is fully rested, biiiig stretch!");
+      sleepAlert = "Wadson is fully rested, biiiig stretch!";
+      return sleepAlert;
 
     } else if(this.sleepLevel === 2){
-      alert("Wadson is a wittle sweepy");
-      return("Wadson is a wittle sweepy");
+      sleepAlert = "Wadson is a wittle sweepy";
+      return sleepAlert;
 
     } else if(this.sleepLevel === 1){
-      alert("Wadson is SOOOOO tired, you had better put him to bed soon!");
-      return("Wadson is SOOOOO tired, you had better put him to bed soon!");
+      sleepAlert = "Wadson is SOOOOO tired, you had better put him to bed soon!";
+      return sleepAlert;
 
     } else if(this.sleepLevel === 0){
-      alert("Auto SHUTdown yo! Wadson is going to sleep now whether you like it or not.");
-      return("Auto SHUTdown yo! Wadson is going to sleep now whether you like it or not.");
+      sleepAlert = "Auto SHUTdown yo! Wadson is going to sleep now whether you like it or not.";
+      return sleepAlert;
     }
+
+    alertPlay(){
+      let playAlert;
+      if(this.playLevel === 4){
+        playAlert = "Wadson is content";
+        return playAlert;
+
+      } else if(this.playLevel === 2){
+        playAlert = "Wadson welmed";
+        return playAlert;
+
+      } else if(this.playLevel === 1){
+        playAlert = "Wadson supes bored, you should go outside and play!";
+        return playAlert;
+
+      } else if(this.playLevel === 0){
+        playAlert = "Wadson is checked out and socially awkward now because you haven't played in daaays!";
+        return playAlert;
+      }
   }
   // add functionality for play alerts
    feed() {
